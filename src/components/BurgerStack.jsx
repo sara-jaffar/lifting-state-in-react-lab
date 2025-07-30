@@ -1,7 +1,9 @@
 const BurgerStack = (props) => {
   const { stack, RemoveFromBurger } = props;
   return (
-    (stack.length === 0) ? <p>No ingredient added yet</p> : (
+    <>
+    {
+         (stack.length === 0) ? <p>No ingredient added yet</p> : (
         <ul>
         {stack.map((ingredient, index) => (
             <li key={index} style={{ backgroundColor: ingredient.color }}>
@@ -11,6 +13,8 @@ const BurgerStack = (props) => {
         ))}
         </ul>
     )
+    }
+    </>
   )
 };
 
